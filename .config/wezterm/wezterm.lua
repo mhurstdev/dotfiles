@@ -1,6 +1,7 @@
 local wezterm = require "wezterm"
 
 return {
+	send_composed_key_when_left_alt_is_pressed = true,
 	font = wezterm.font "Input Mono",
 	font_size = 18,
 	harfbuzz_features = {
