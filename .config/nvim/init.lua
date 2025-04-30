@@ -1,1 +1,1 @@
-print("init")
+require("config.autocmds")
