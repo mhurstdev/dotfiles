@@ -4,7 +4,17 @@ return {
 	-- dependencies = { "nvim-tree/nvim-web-devicons" },
 	-- or if using mini.icons/mini.nvim
 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	opts = {},
+	config = function()
+		require("fzf-lua").setup({
+			"hide",
+			files = {
+				find_opts = [[-type f \! -path '*/.git/*' \! -path '*/node_modules/*']],
+				rg_opts = [[--color=never --hidden --files -g "!.git" -g "!node_modules"]],
+				fd_opts = [[--color=never --hidden --type f --type l --exclude .git --exclude node_modules]],
+				dir_opts = [[/s/b/a:-d]],
+			},
+		})
+	end,
 	keys = {
 		{
 			"<leader>pf",
