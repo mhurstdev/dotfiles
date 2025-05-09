@@ -16,6 +16,7 @@ return {
 			},
 			group_overrides = {
 				Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
+				CursorLineNr = { fg = c.vscYellow },
 			},
 		})
 
