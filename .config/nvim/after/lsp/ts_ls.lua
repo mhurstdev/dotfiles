@@ -1,5 +1,4 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/configs/ts_ls.lua
--- vim.k
 
 return {
 	init_options = { hostInfo = "neovim" },
