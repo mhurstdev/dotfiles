@@ -13,5 +13,14 @@ return {
 		"selene.yml",
 		".git",
 	},
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = {
+					"vim",
+				},
+			},
+		},
+	},
 	single_file_support = true,
 }
