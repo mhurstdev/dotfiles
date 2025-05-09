@@ -32,6 +32,13 @@ return {
 			desc = "Find in neovim configuration",
 		},
 		{
+			"<leader>p.",
+			function()
+				require("fzf-lua").files({ cwd = os.getenv("HOME") .. "dotfiles" })
+			end,
+			desc = "Find in neovim configuration",
+		},
+		{
 			"<leader>ph",
 			function()
 				require("fzf-lua").helptags()
