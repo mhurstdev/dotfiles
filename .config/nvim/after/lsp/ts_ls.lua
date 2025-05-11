@@ -2,7 +2,7 @@
 
 return {
 	init_options = { hostInfo = "neovim" },
-	cmd = { "typescript-panguage-server", "--stdio" },
+	cmd = { "typescript-language-server", "--stdio" },
 	filetypes = {
 		"javascript",
 		"javascriptreact",
