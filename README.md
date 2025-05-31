@@ -1,5 +1,5 @@
 ```
-git clone git@github.com:mbarnesdev/dotfiles.git ~/dotfiles
+git clone git@github.com:mhurstdev/dotfiles.git ~/dotfiles
 ```
 
 ```
