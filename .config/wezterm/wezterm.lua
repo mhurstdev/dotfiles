@@ -6,6 +6,7 @@ return {
 	colors = {
 		background = "#000000",
 	},
+	-- font = wezterm.font("Input Mono"),
 	font = wezterm.font("0xProto Nerd Font Mono"),
 	font_size = 18,
 	harfbuzz_features = {
