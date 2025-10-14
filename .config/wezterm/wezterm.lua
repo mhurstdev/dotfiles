@@ -6,7 +6,7 @@ return {
 		background = "#000000",
 	},
 	font = wezterm.font("TX-02"),
-	font_size = 18,
+	font_size = 22,
 	harfbuzz_features = {
 		"calt=0",
 		"clig=0",
