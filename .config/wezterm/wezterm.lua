@@ -5,8 +5,8 @@ return {
 	colors = {
 		background = "#000000",
 	},
-	font = wezterm.font("TX-02"),
-	font_size = 22,
+	font = wezterm.font("FiraMono Nerd Font"),
+	font_size = 20,
 	harfbuzz_features = {
 		"calt=0",
 		"clig=0",
