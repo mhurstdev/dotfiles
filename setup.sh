@@ -1,7 +1,12 @@
 #!/bin/bash
 
-git clone git@github.com:mhurstdev/dotfiles.git ~/dotfiles
+if [ -d "$HOME/dotfiles" ]; then
+	echo "~/dotfiles already exists. Aborting to avoid overwriting." >&2
+	exit 1
+fi
 
-chmod +x ~/dotfiles/scripts/deploy.sh
+git clone git@github.com:mhurstdev/dotfiles.git "$HOME/dotfiles"
 
-~/dotfiles/scripts/deploy.sh
+chmod +x "$HOME/dotfiles/scripts/bootstrap.sh"
+
+"$HOME/dotfiles/scripts/bootstrap.sh"
