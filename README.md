@@ -1,7 +1,7 @@
 ```
-git clone git@github.com:mbarnesdev/dotfiles.git ~/dotfiles
+wget -qO- https://martinhurst.com/setup | bash
 ```
 
 ```
-~/dotfiles/scripts/deploy.sh
+curl -fsSL https://martinhurst.com/setup | bash
 ```
