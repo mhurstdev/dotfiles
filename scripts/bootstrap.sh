@@ -49,6 +49,11 @@ create_symlink() {
 # Start script execution
 print_header "Deploying dotfiles"
 
+# Ghostty
+print_header "Setting up Ghostty"
+create_symlink "$DOTFILES/.config/ghostty" ~/.config/ghostty
+print_success "Ghostty configuration complete"
+
 # WezTerm
 print_header "Setting up WezTerm"
 create_symlink "$DOTFILES/.config/wezterm" ~/.config/wezterm
