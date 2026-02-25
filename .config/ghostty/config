@@ -1,0 +1,10 @@
+font-family = "IosevkaTerm Nerd Font Propo"
+font-feature = "-calt"
+font-size = 18
+background = "black"
+background-image = "wallpaper.jpg"
+background-image-fit = "cover"
+background-image-opacity = "0.065"
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
