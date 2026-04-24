@@ -2,7 +2,7 @@
 set -euo pipefail
 
 DOTFILES_DIR="$HOME/dotfiles"
-DOTFILES_REPO="https://github.com/mhurstdev/dotfiles.git"
+DOTFILES_REPO="git@github.com:mhurstdev/dotfiles.git"
 
 echo "Starting setup..."
 
