@@ -11,12 +11,12 @@ if ! command -v brew >/dev/null 2>&1; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-command -v git >/dev/null 2>&1 || { echo "git not found, try: xcode-select --install"; exit 1; }
+command -v git >/dev/null 2>&1 || brew install git
 
 command -v stow >/dev/null 2>&1 || brew install stow
 
 if [ -d "$DOTFILES_DIR" ]; then
-  echo "Dotfiles already exist, pulling latest..."
+  echo "Dotfiles already exists, pulling latest..."
   git -C "$DOTFILES_DIR" pull
 else
   echo "Cloning dotfiles..."
