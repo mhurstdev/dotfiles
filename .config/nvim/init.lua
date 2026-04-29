@@ -251,7 +251,7 @@ local plugins = {
 					draw = {
 						treesitter = { "lsp" },
 						columns = {
-							{ "label",     "label_description", gap = 1 },
+							{ "label", "label_description", gap = 1 },
 							{ "kind_icon", "kind" },
 						},
 					},
@@ -299,6 +299,13 @@ local plugins = {
 			},
 		},
 		keys = {
+			{
+				"<leader>pd",
+				function()
+					require("fzf-lua").diagnostics_workspace()
+				end,
+				desc = "Find Files in project directory",
+			},
 			{
 				"<leader>pf",
 				function()
@@ -399,10 +406,10 @@ local plugins = {
 			"TmuxNavigatePrevious",
 		},
 		keys = {
-			{ "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
-			{ "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
-			{ "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
-			{ "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 	},
@@ -518,7 +525,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	if vim.v.shell_error ~= 0 then
 		vim.api.nvim_echo({
 			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-			{ out,                            "WarningMsg" },
+			{ out, "WarningMsg" },
 			{ "\nPress any key to exit..." },
 		}, true, {})
 		vim.fn.getchar()
