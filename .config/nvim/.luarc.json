@@ -1,4 +1,0 @@
-{
-  "Lua.workspace.library": ["$VIMRUNTIME/lua"],
-  "Lua.globals": ["vim"]
-}
