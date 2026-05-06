@@ -18,7 +18,7 @@ return {
 			"build-storybook",
 		}
 
-		local find_command = { "fd", "--type", "f", "--hidden" }
+		local find_command = { "fdfind", "--type", "f", "--hidden" }
 		for _, dir in ipairs(directory_blacklist) do
 			table.insert(find_command, "--exclude")
 			table.insert(find_command, dir)
@@ -42,9 +42,11 @@ return {
 		require("telescope").load_extension "fzf"
 
 		vim.keymap.set("n", "<leader>pf", builtin.find_files)
+		vim.keymap.set("n", "<leader>ph", builtin.help_tags)
+		-- vim.keymap.set("n", "<leader>pv", builtin.vim_options)
 		vim.keymap.set("n", "<leader>pc", function()
 			builtin.find_files {
-				cwd = vim.fn.stdpath "config",
+				cd = vim.fn.stdpath "config",
 			}
 		end)
 		vim.keymap.set("n", "<leader>pg", builtin.live_grep)
