@@ -10,25 +10,24 @@ return {
 	config = function()
 		local builtin = require "telescope.builtin"
 
-		local directory_blacklist = {
-			".git",
-			"node_modules",
-			"dist",
-			"build",
-			"build-storybook",
-		}
-
-		local find_command = { "fdfind", "--type", "f", "--hidden" }
-		for _, dir in ipairs(directory_blacklist) do
-			table.insert(find_command, "--exclude")
-			table.insert(find_command, dir)
-		end
-
 		require("telescope").setup {
+			defaults = {
+				file_ignore_patterns = {
+					".git",
+					"node_modules",
+					"dist",
+					"build",
+					"build-storybook",
+				},
+				mappings = {
+					i = {
+						["<C-a>"] = require("telescope.actions").select_all,
+					},
+				},
+			},
 			pickers = {
 				find_files = {
 					hidden = true,
-					find_command = find_command,
 				},
 				live_grep = {
 					hidden = true,
