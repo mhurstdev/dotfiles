@@ -20,3 +20,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append "@-@"
 vim.opt.updatetime = 1000
 vim.opt.mouse = ""
+vim.opt.laststatus = 0
+vim.opt.ruler = false
