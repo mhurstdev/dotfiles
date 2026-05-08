@@ -2,7 +2,6 @@ require "config.globals"
 require "config.keymaps"
 require "config.autocmds"
 require "config.options"
-require "config.colorscheme"
 require "config.filetype"
 require "config.lsp"
 
@@ -22,7 +21,15 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local plugins_development_path = os.getenv "HOME" .. "/demos"
+
 require("lazy").setup("plugins", {
+	dev = {
+		path = plugins_development_path,
+	},
+	git = {
+		url_format = "git@github.com:%s.git",
+	},
 	change_detection = {
 		notify = false,
 	},
