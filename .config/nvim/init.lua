@@ -21,7 +21,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins_development_path = os.getenv "HOME" .. "/demos"
+local plugins_development_path = os.getenv "HOME" .. "/Developer/demos"
 
 require("lazy").setup("plugins", {
 	dev = {
