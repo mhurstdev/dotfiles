@@ -12,7 +12,10 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.config("terraformls", {
-	filetypes = { "terraform" },
+	filetypes = {
+		"terraform",
+		"terraform-vars",
+	},
 	init_options = {
 		ignoreSingleFileWarning = true,
 	},
