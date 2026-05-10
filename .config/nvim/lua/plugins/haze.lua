@@ -1,7 +1,10 @@
 return {
 	"mhurstdev/haze.nvim",
 	dev = true,
-	opts = {
-		transparent = true,
-	},
+	config = function()
+		require("haze").setup {
+			transparent = true,
+		}
+		vim.cmd.colorscheme "haze"
+	end,
 }
