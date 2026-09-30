@@ -7,19 +7,21 @@ config.hide_tab_bar_if_only_one_tab = true
 config.send_composed_key_when_left_alt_is_pressed = true
 
 -- Background
---  config.background = {
--- 	{
--- 		source = {
--- 			File = os.getenv "HOME" .. "/dotfiles/.config/wezterm/background.jpg",
--- 		},
--- 		hsb = {
--- 			brightness = 0.075,
--- 		},
--- 	},
--- }
---
+config.background = {
+	{
+		source = {
+			File = os.getenv "HOME" .. "/dotfiles/.config/wezterm/background.jpg",
+		},
+		hsb = {
+			brightness = 0.025,
+		},
+	},
+}
+
+
 -- Font
-config.font = wezterm.font "TX-02"
+-- config.font = wezterm.font "Menlo"
+config.font = wezterm.font "GeistMono NFM"
 config.font_size = 20
 config.harfbuzz_features = {
 	"calt=0",

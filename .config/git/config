@@ -1,0 +1,9 @@
+[user]
+	name = Martin Barnes
+	email = martin.barnes@wppmedia.com
+
+[includeIf "gitdir:~/personal/"]
+	path = personal
+
+[includeIf "gitdir:~/work/"]
+	path = work
