@@ -18,7 +18,6 @@ config.background = {
 	},
 }
 
-
 -- Font
 -- config.font = wezterm.font "Menlo"
 config.font = wezterm.font "GeistMono NFM"
